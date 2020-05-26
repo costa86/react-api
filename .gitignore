@@ -2,3 +2,4 @@
 /my-code/node_modules
 *.zip
 *.env
+/layout
