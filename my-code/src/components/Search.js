@@ -9,12 +9,13 @@ export function Search(props) {
 
     return (
         <>
-            <p></p>
-            <input id="q" ref={inputMovie} onChange={props.changeFun} placeholder={props.placeholder}></input>
-            <small id="hint"></small>
-            <p></p>
-            <button className="btn btn-success" disabled={props.disabled} onClick={props.clickFun}>SEARCH</button>
-            <p></p>
+            <div className="search">
+                <input id="q" ref={inputMovie} onChange={props.changeFun} placeholder={props.placeholder}></input>
+                <button disabled={props.disabled} onClick={props.clickFun}>SEARCH</button>
+                
+                <small id="hint"></small>
+            </div>
+
         </>
     );
 }

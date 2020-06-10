@@ -29,8 +29,15 @@ export function AllMoviesSearch() {
         let qry = e.target.value;
         setQuery(qry);
         const hint = document.getElementById("hint");
-        (qry.length >= min) ? setBtnDisabled(false) : setBtnDisabled(true);
+        setBtnDisabled(true);
         hint.innerHTML = `${qry.length}/${min}`;
+
+        if (qry.length >= min){
+            setBtnDisabled(false);
+            hint.innerHTML = "Cool! You can click on the search button now";
+        }
+        // (qry.length >= min) ? setBtnDisabled(false) : setBtnDisabled(true);
+
     }
     //  
 
