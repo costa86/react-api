@@ -1,5 +1,6 @@
 * {
   font-family: "Balsamiq Sans", cursive;
+  scroll-behavior: smooth;
 }
 // variables
 $main-color: green;
@@ -26,6 +27,10 @@ $main-color: green;
   grid-auto-columns: 70% 1fr;
 
   .metadata {
+    h1{
+      text-transform: uppercase;
+
+    }
     grid-area: metadata;
     img {
       transition: 0.5s;
@@ -37,14 +42,16 @@ $main-color: green;
   }
   .poster {
     grid-area: poster;
-    img {
-      border: 15px solid transparent;
-      border-image-slice: 31 5 34 4;
-      border-image-repeat: fill;
-      border-image-source: url("https://lh3.googleusercontent.com/proxy/VBJhnaniUVc4XZxePYzkBA8SERrl2E7BRmNw5tI5BLejFXewmrI0USM9cfWY5aJWUIi40m1jh_UsFQQ4UGQLTjE");
-      padding: 5px;
-    }
+
   }
+}
+
+.cinema-border{
+  border: 15px solid transparent;
+  border-image-slice: 31 5 34 4;
+  border-image-repeat: fill;
+  border-image-source: url("https://lh3.googleusercontent.com/proxy/VBJhnaniUVc4XZxePYzkBA8SERrl2E7BRmNw5tI5BLejFXewmrI0USM9cfWY5aJWUIi40m1jh_UsFQQ4UGQLTjE");
+  padding: 5px;
 }
 
 .container {
@@ -80,17 +87,19 @@ $main-color: green;
 
   .item {
     border-radius: 5px;
-    border: 3px solid $main-color;
+    border: 5px solid;
     padding: 5px;
     text-align: center;
     text-transform: uppercase;
     &:hover {
       opacity: 0.5;
       transform: scale(0.95);
+      
     }
 
     img {
       width: 100%;
+      border-radius: 5px;
       height: auto;
     }
   }
@@ -98,9 +107,7 @@ $main-color: green;
 
 .search {
   background-color: gainsboro;
-  position: fixed;
   width: 100%;
-
   grid-area: search;
 
   small {
@@ -115,7 +122,7 @@ $main-color: green;
     font-size: medium;
     background-color: $main-color;
     margin-left: 5px;
-    //background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    transition: 1s;
     &:disabled {
       cursor: not-allowed;
       opacity: 0.5;

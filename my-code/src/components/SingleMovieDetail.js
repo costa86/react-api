@@ -87,7 +87,7 @@ export function SingleMovieDetail(props) {
 
                 </div>
                 <div className="poster">
-                    <img src={props.item.Poster} alt={props.item.Title} title={props.item.Title}></img>
+                    <img className="cinema-border" src={props.item.Poster} alt={props.item.Title} title={props.item.Title}></img>
 
                 </div>
             </div>
