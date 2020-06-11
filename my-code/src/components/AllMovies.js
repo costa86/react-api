@@ -1,5 +1,6 @@
 import React from "react";
 import { SingleMovie } from "./SingleMovie";
+import { TopBtn } from "./TopBtn";
 
 export function AllMovies(props) {
 
@@ -12,7 +13,7 @@ export function AllMovies(props) {
             <div className="results">
                 {allMovies}
             </div>
-
+            <TopBtn />
         </>
     );
 
