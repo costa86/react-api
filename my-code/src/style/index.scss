@@ -6,45 +6,45 @@ $main-color: green;
 
 // variables
 
-
-@keyframes example {
-  25%  {transform: rotate(30deg);}
-  75% {transform: rotate(-30deg);}
-  100% {transform: rotate(0);}
-
+@keyframes swing {
+  25% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
-.movie{
+.movie {
   display: grid;
   grid-template-areas: "metadata poster";
   gap: 1rem;
   padding: 10px;
   grid-auto-columns: 70% 1fr;
 
-  .metadata{
+  .metadata {
     grid-area: metadata;
-    img{
-      transition: .5s;
-      &:hover{
-        animation-name: example;
+    img {
+      transition: 0.5s;
+      &:hover {
+        animation-name: swing;
         animation-duration: 1s;
-
       }
     }
-  
-    
   }
-  .poster{
+  .poster {
     grid-area: poster;
-   img{
-     width: 100%;
-     height: auto;
-     border-radius: 5px;
-   }
-
+    img {
+      border: 15px solid transparent;
+      border-image-slice: 31 5 34 4;
+      border-image-repeat: fill;
+      border-image-source: url("https://lh3.googleusercontent.com/proxy/VBJhnaniUVc4XZxePYzkBA8SERrl2E7BRmNw5tI5BLejFXewmrI0USM9cfWY5aJWUIi40m1jh_UsFQQ4UGQLTjE");
+      padding: 5px;
+    }
   }
-
-  
 }
 
 .container {
@@ -54,23 +54,22 @@ $main-color: green;
     "results";
 }
 
-.top{
+.top {
   display: none;
   position: fixed;
   bottom: 20px;
   right: 30px;
   z-index: 99;
   background-color: $main-color;
-  opacity: .5;
+  opacity: 0.5;
   border-radius: 50%;
   cursor: pointer;
   padding: 15px;
   border: none;
   text-align: center;
-  &:hover{
+  &:hover {
     opacity: 1;
   }
-
 }
 
 .results {
@@ -78,22 +77,21 @@ $main-color: green;
   gap: 1rem;
   grid-area: results;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  
+
   .item {
     border-radius: 5px;
-    border: 3px solid $main-color;  
-    padding: 5px;    
+    border: 3px solid $main-color;
+    padding: 5px;
     text-align: center;
     text-transform: uppercase;
-    &:hover{
+    &:hover {
       opacity: 0.5;
-      transform: scale(.95);
+      transform: scale(0.95);
     }
 
     img {
       width: 100%;
       height: auto;
-
     }
   }
 }
