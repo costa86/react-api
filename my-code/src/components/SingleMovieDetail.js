@@ -5,10 +5,11 @@ import { TopBtn } from "./TopBtn";
 function Metadata(props) {
     return (
         <>
-            <td>
+            <div className="detail-item">
                 <img alt={props.alt} title={props.alt} src={props.img} />
-            </td>
-            <td><h4>{props.text}</h4> </td>
+                <h4>{props.text}</h4>
+            </div>
+
 
         </>
     )
@@ -25,65 +26,59 @@ export function SingleMovieDetail(props) {
                     <h1>{props.item.Title} ({props.item.Year})</h1>
                     <h3>{props.item.Plot}</h3>
                     <hr></hr>
-                    <table>
-                        <tr>
-                            <Metadata img="https://img.icons8.com/color/48/000000/rating-circled.png"
-                                text={props.item.Rated}
-                                alt="Rated"
-                            />
-                            <Metadata img="https://img.icons8.com/color/48/000000/imdb.png"
-                                text={props.item.imdbRating}
-                                alt="IMDB Rating"
-                            />
-                            <Metadata img="https://img.icons8.com/color/48/000000/calendar.png"
-                                text={props.item.Released}
-                                alt="Released date"
-                            />
 
-                        </tr>
+                    <Metadata img="https://img.icons8.com/color/48/000000/rating-circled.png"
+                        text={props.item.Rated}
+                        alt="Rated"
+                    />
+                    <Metadata img="https://img.icons8.com/color/48/000000/imdb.png"
+                        text={props.item.imdbRating}
+                        alt="IMDB Rating"
+                    />
+                    <Metadata img="https://img.icons8.com/color/48/000000/calendar.png"
+                        text={props.item.Released}
+                        alt="Released date"
+                    />
 
-                        <tr>
-                            <Metadata img="https://img.icons8.com/color/48/000000/hourglass.png"
-                                text={props.item.Runtime}
-                                alt="Runtime"
-                            />
 
-                            <Metadata img="https://img.icons8.com/color/48/000000/comedy.png"
-                                text={props.item.Genre}
-                                alt="Genre"
-                            />
-                            <Metadata img="https://img.icons8.com/color/48/000000/camping-chair.png"
-                                text={props.item.Director}
-                                alt="Director"
-                            />
-                        </tr>
+                    <Metadata img="https://img.icons8.com/color/48/000000/hourglass.png"
+                        text={props.item.Runtime}
+                        alt="Runtime"
+                    />
 
-                        <tr>
+                    <Metadata img="https://img.icons8.com/color/48/000000/comedy.png"
+                        text={props.item.Genre}
+                        alt="Genre"
+                    />
+                    <Metadata img="https://img.icons8.com/color/48/000000/camping-chair.png"
+                        text={props.item.Director}
+                        alt="Director"
+                    />
 
-                            <Metadata img="https://img.icons8.com/color/48/000000/trophy.png"
-                                text={props.item.Awards}
-                                alt="Awards"
-                            />
+                    <Metadata img="https://img.icons8.com/color/48/000000/trophy.png"
+                        text={props.item.Awards}
+                        alt="Awards"
+                    />
 
-                            <Metadata img="https://img.icons8.com/color/48/000000/crowd.png"
-                                text={props.item.Actors}
-                                alt="Actors"
-                            />
+                    <Metadata img="https://img.icons8.com/color/48/000000/crowd.png"
+                        text={props.item.Actors}
+                        alt="Actors"
+                    />
 
-                            <Metadata img="https://img.icons8.com/color/48/000000/language-skill.png"
-                                text={props.item.Language}
-                                alt="Language"
-                            />
-                        </tr>
+                    <Metadata img="https://img.icons8.com/color/48/000000/language-skill.png"
+                        text={props.item.Language}
+                        alt="Language"
+                    />
 
-                        <tr>
-                            <Metadata img="https://img.icons8.com/color/48/000000/worldwide-location.png"
-                                text={props.item.Country}
-                                alt="Country"
-                            />
-                        </tr>
+                    <Metadata img="https://img.icons8.com/color/48/000000/worldwide-location.png"
+                        text={props.item.Country}
+                        alt="Country"
+                    />
 
-                    </table>
+                    <Metadata img="https://img.icons8.com/color/48/000000/elections.png"
+                        text={props.item.imdbVotes}
+                        alt="IMDB votes"
+                    />
 
                 </div>
                 <div className="poster">

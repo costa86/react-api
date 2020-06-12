@@ -12,9 +12,6 @@ export function App() {
     return (
         <Router>
             <div>
-         {/*        <nav >
-                     <Link to="/">MOVIE SEARCH!</Link>
-                </nav> */}
                 <Switch>
                     <Route exact path="/">
                         <AllMoviesSearch />
@@ -24,6 +21,14 @@ export function App() {
                     </Route>
 
                 </Switch>
+                <div className="footer">
+                    Handcrafted by Lourenço Costa, with:
+                <br />
+
+                    <img title="SASS" alt="SASS" src="https://img.icons8.com/color/48/000000/sass.png" />
+                    <img title="React" alt="React" src="https://img.icons8.com/color/48/000000/react-native.png" />
+
+                </div>
             </div>
         </Router>
     );

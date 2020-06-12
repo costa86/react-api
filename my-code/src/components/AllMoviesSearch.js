@@ -64,6 +64,7 @@ export function AllMoviesSearch() {
                 <> {base}
                     <h3>Results for {query}:</h3>
                     <AllMovies movies={data.Search} />
+       
                 </>
             );
         default:

@@ -7,6 +7,21 @@ $main-color: green;
 
 // variables
 
+.detail-item {
+  display: inline-block;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 5px;
+  img,
+  h4 {
+    display: inline-block;
+    padding: 5px;
+    vertical-align: middle;
+  }
+}
+
 @keyframes swing {
   25% {
     transform: rotate(30deg);
@@ -25,11 +40,11 @@ $main-color: green;
   gap: 1rem;
   padding: 10px;
   grid-auto-columns: 70% 1fr;
+  // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
   .metadata {
-    h1{
+    h1 {
       text-transform: uppercase;
-
     }
     grid-area: metadata;
     img {
@@ -42,11 +57,10 @@ $main-color: green;
   }
   .poster {
     grid-area: poster;
-
   }
 }
 
-.cinema-border{
+.cinema-border {
   border: 15px solid transparent;
   border-image-slice: 31 5 34 4;
   border-image-repeat: fill;
@@ -58,7 +72,15 @@ $main-color: green;
   display: grid;
   grid-template-areas:
     "search"
-    "results";
+    "results"
+    "footer";
+}
+
+.footer {
+  grid-area: footer;
+
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .top {
@@ -94,7 +116,6 @@ $main-color: green;
     &:hover {
       opacity: 0.5;
       transform: scale(0.95);
-      
     }
 
     img {
@@ -133,5 +154,15 @@ $main-color: green;
     font-size: large;
     padding: 5px;
     border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  .movie {
+    text-align: center;
+    grid-template-areas:
+      "metadata"
+      "poster";
   }
 }
