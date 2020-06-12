@@ -10,6 +10,8 @@ export function AllMovies(props) {
 
     return (
         <>
+            <h3 className="results-for">Results found: {props.movies.length}</h3>
+
             <div className="results">
                 {allMovies}
             </div>

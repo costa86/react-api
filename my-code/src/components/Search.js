@@ -11,8 +11,7 @@ export function Search(props) {
         <>
             <div className="search">
                 <input id="q" ref={inputMovie} onChange={props.changeFun} placeholder={props.placeholder}></input>
-                <button disabled={props.disabled} onClick={props.clickFun}>SEARCH</button>
-                
+                <button id="btn" disabled={props.disabled} onClick={props.clickFun}>SEARCH</button>
                 <small id="hint"></small>
             </div>
 
