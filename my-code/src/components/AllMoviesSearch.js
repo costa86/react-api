@@ -3,6 +3,7 @@ import { API_KEY, APP_NAME } from "../constants";
 import { useFetch } from "../hooks";
 import { Search } from "./Search";
 import { AllMovies } from "./AllMovies";
+import { TopBtn } from './TopBtn';
 
 export function AllMoviesSearch() {
     const min = 3; // Min chars count to search
@@ -45,7 +46,7 @@ export function AllMoviesSearch() {
             <Search
                 clickFun={search}
                 changeFun={enableBtn}
-                placeholder="Movies, series,etc..."
+                placeholder="Movies, series, games..."
                 disabled={btnDisabled} />
         </>
     );
@@ -58,7 +59,7 @@ export function AllMoviesSearch() {
                 document.getElementById("q").value = title;
                 setBtnDisabled(false);
                 const hint = document.getElementById("hint");
-                hint.innerHTML = `Search for ${title}` ;
+                hint.innerHTML = `Search for ${title}`;
                 setQuery(title);
             })
         }
@@ -89,6 +90,8 @@ export function AllMoviesSearch() {
                         <img onMouseOver={hoverImg} className="sample" title="Joker" alt="Joker" src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></img>
                         <img onMouseOver={hoverImg} className="sample" title="Castlevania" alt="Castlevania" src="https://m.media-amazon.com/images/M/MV5BYWUwN2UwYTktMDk4OC00YTg0LThmNTItNWE3ZjQxOTIxZTg3XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"></img>
                     </div>
+                    <TopBtn />
+
                 </>);
     }
     //

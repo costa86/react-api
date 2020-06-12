@@ -61,6 +61,11 @@ export function SingleMovieDetail(props) {
                         alt="Country"
                     />
 
+                    <Metadata img="https://img.icons8.com/color/48/000000/tag.png"
+                        text={props.item.Type}
+                        alt="Type"
+                    />
+
 
                     <Metadata img="https://img.icons8.com/color/48/000000/trophy.png"
                         text={props.item.Awards}
