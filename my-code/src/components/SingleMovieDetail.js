@@ -1,6 +1,7 @@
 import React from 'react'
 import { APP_NAME } from "../constants";
 import { TopBtn } from "./TopBtn";
+import { Link } from 'react-router-dom';
 
 function Metadata(props) {
     return (
@@ -35,6 +36,11 @@ export function SingleMovieDetail(props) {
                         text={props.item.imdbRating}
                         alt="IMDB Rating"
                     />
+
+                    <Metadata img="https://img.icons8.com/color/48/000000/elections.png"
+                        text={props.item.imdbVotes}
+                        alt="IMDB votes"
+                    />
                     <Metadata img="https://img.icons8.com/color/48/000000/calendar.png"
                         text={props.item.Released}
                         alt="Released date"
@@ -44,6 +50,21 @@ export function SingleMovieDetail(props) {
                     <Metadata img="https://img.icons8.com/color/48/000000/hourglass.png"
                         text={props.item.Runtime}
                         alt="Runtime"
+                    />
+                    <Metadata img="https://img.icons8.com/color/48/000000/language-skill.png"
+                        text={props.item.Language}
+                        alt="Language"
+                    />
+
+                    <Metadata img="https://img.icons8.com/color/48/000000/worldwide-location.png"
+                        text={props.item.Country}
+                        alt="Country"
+                    />
+
+
+                    <Metadata img="https://img.icons8.com/color/48/000000/trophy.png"
+                        text={props.item.Awards}
+                        alt="Awards"
                     />
 
                     <Metadata img="https://img.icons8.com/color/48/000000/comedy.png"
@@ -55,30 +76,15 @@ export function SingleMovieDetail(props) {
                         alt="Director"
                     />
 
-                    <Metadata img="https://img.icons8.com/color/48/000000/trophy.png"
-                        text={props.item.Awards}
-                        alt="Awards"
-                    />
 
                     <Metadata img="https://img.icons8.com/color/48/000000/crowd.png"
                         text={props.item.Actors}
                         alt="Actors"
                     />
-
-                    <Metadata img="https://img.icons8.com/color/48/000000/language-skill.png"
-                        text={props.item.Language}
-                        alt="Language"
-                    />
-
-                    <Metadata img="https://img.icons8.com/color/48/000000/worldwide-location.png"
-                        text={props.item.Country}
-                        alt="Country"
-                    />
-
-                    <Metadata img="https://img.icons8.com/color/48/000000/elections.png"
-                        text={props.item.imdbVotes}
-                        alt="IMDB votes"
-                    />
+                    <br></br>
+                    <Link to="/">
+                        <button>NEW SEARCH</button>
+                    </Link>
 
                 </div>
                 <div className="poster">
