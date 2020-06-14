@@ -2,8 +2,10 @@ import React from 'react'
 import { APP_NAME } from "../constants";
 import { TopBtn } from "./TopBtn";
 import { Link } from 'react-router-dom';
+import noImg from "./../assets/no-image.png";
 
 function Metadata(props) {
+
     return (
         <>
             <div className="detail-item">
@@ -18,6 +20,7 @@ function Metadata(props) {
 
 export function SingleMovieDetail(props) {
     document.title = `${props.item.Title} | ${APP_NAME}`;
+    let noImage = noImg;
 
     return (
         <>
@@ -93,7 +96,7 @@ export function SingleMovieDetail(props) {
 
                 </div>
                 <div className="poster">
-                    <img className="cinema-border" src={props.item.Poster} alt={props.item.Title} title={props.item.Title}></img>
+                    <img className="cinema-border" src={props.item.Poster === "N/A" ? noImage : props.item.Poster} alt={props.item.Title} title={props.item.Title}></img>
 
                 </div>
             </div>

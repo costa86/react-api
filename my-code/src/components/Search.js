@@ -10,7 +10,7 @@ export function Search(props) {
     return (
         <>
             <div className="search">
-                <input id="q" ref={inputMovie} onChange={props.changeFun} placeholder={props.placeholder}></input>
+                <input id="q" autoComplete="off" ref={inputMovie} onChange={props.changeFun} placeholder={props.placeholder}></input>
                 <button id="btn" disabled={props.disabled} onClick={props.clickFun}>SEARCH</button>
                 <small id="hint"></small>
             </div>

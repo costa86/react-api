@@ -1,9 +1,10 @@
 * {
-  font-family: "Balsamiq Sans", cursive;
+  font-family: "Quicksand", sans-serif;
   scroll-behavior: smooth;
 }
 // variables
 $main-color: green;
+$cinema-frame: url("./cinema-border.jpg");
 
 // variables
 
@@ -72,7 +73,7 @@ $main-color: green;
   border: 15px solid transparent;
   border-image-slice: 31 5 34 4;
   border-image-repeat: fill;
-  border-image-source: url("https://lh3.googleusercontent.com/proxy/VBJhnaniUVc4XZxePYzkBA8SERrl2E7BRmNw5tI5BLejFXewmrI0USM9cfWY5aJWUIi40m1jh_UsFQQ4UGQLTjE");
+  border-image-source: $cinema-frame;
   padding: 5px;
 }
 
@@ -113,12 +114,12 @@ $main-color: green;
   display: grid;
   text-align: center;
   gap: 5px;
-  justify-items: center;  
+  justify-items: center;
   img {
     border: 5px solid;
     border-radius: 5px;
     width: 80%;
-    &:hover{
+    &:hover {
       border-color: $main-color;
     }
   }
@@ -129,7 +130,7 @@ $main-color: green;
   text-align: center;
 }
 
-.results-for{
+.results-for {
   text-align: center;
 }
 .results {
@@ -188,32 +189,39 @@ button {
     font-size: large;
     padding: 5px;
     border-radius: 5px;
+    width: 25%;
   }
 }
 
 @media screen and (max-width: 400px) {
+  * {
+    scroll-behavior: auto;
+  }
+  .ideas,
+  .ideas-header {
+    display: none;
+  }
 
-  .search{
+  .search {
     display: grid;
     text-align: center;
     font-size: 13px;
-    input{
+    input {
       margin: auto;
       display: block;
       width: 80%;
     }
-    button{
+    button {
       margin: auto;
       margin-top: 5px;
       width: 80%;
-      
     }
   }
-  .ideas{    
+  .ideas {
     gap: 5px;
     padding: 5px;
     grid-template-columns: 1fr;
-    img{
+    img {
       width: 95%;
     }
   }
